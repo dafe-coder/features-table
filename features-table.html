@@ -72,12 +72,12 @@
 					</svg>
 				</a>
 			</div>
-			<div class="spp-go-prem-switcher">
-				<input type="checkbox" checked="" hidden="" id="go-prem-switcher" />
+			<div class="switcher">
+				<input type="checkbox" checked="" hidden="" id="switcher" />
 				<label>
-					<div class="go-prem-switcher-bg"></div>
-					<span id="go-prem-switcher-pro">Advanced</span>
-					<span id="go-prem-switcher-simple">Simple</span>
+					<div class="switcher-bg"></div>
+					<span id="switcher-pro">Tech Explanations</span>
+					<span id="switcher-simple">Simple Explanations</span>
 				</label>
 			</div>
 			<table class="features-table simple">
@@ -767,11 +767,9 @@
 
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
-			const goPremSwitcherInput = document.getElementById('go-prem-switcher')
-			const goPremSwitcherPro = document.getElementById('go-prem-switcher-pro')
-			const goPremSwitcherSimple = document.getElementById(
-				'go-prem-switcher-simple'
-			)
+			const goPremSwitcherInput = document.getElementById('switcher')
+			const goPremSwitcherPro = document.getElementById('switcher-pro')
+			const goPremSwitcherSimple = document.getElementById('switcher-simple')
 			let activeClickPrem = false
 			let activeClickPremID = null
 

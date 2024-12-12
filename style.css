@@ -1,21 +1,37 @@
+/*
+* Prefixed by:
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 body {
 	font-family: Tahoma, Verdana, Arial, 'Sans Serif';
 	margin: 0;
 	line-height: 1.6;
 }
 * {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
 .logo-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 .wrapper {
 	padding: 40px 20px;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
 .wrapper::after {
@@ -38,6 +54,7 @@ body {
 	border: 0;
 	color: #ffffff;
 	background: hsla(0, 0%, 98%, 0.125);
+	-webkit-backdrop-filter: blur(1.5px);
 	backdrop-filter: blur(1.5px);
 	margin: 50px auto 20px;
 }
@@ -111,23 +128,23 @@ body {
 	margin-top: -1px;
 }
 
-.spp-go-prem-switcher {
+.switcher {
 	margin-bottom: 30px;
-	max-width: 300px;
+	max-width: 400px;
 	margin: 40px auto 0;
 }
-.spp-go-prem-switcher input:checked + label .go-prem-switcher-bg {
+.switcher input:checked + label .switcher-bg {
 	left: calc(50% - 5px);
 }
-.spp-go-prem-switcher input:checked + label span:first-of-type {
+.switcher input:checked + label span:first-of-type {
 	color: rgba(255, 255, 255, 0.5);
 	font-weight: 400;
 }
-.spp-go-prem-switcher input:checked + label span:last-of-type {
+.switcher input:checked + label span:last-of-type {
 	color: #ffffff;
 	font-weight: 500;
 }
-.spp-go-prem-switcher label {
+.switcher label {
 	border: 1px solid #686867;
 	border-radius: 15px;
 	background-color: rgba(251, 251, 251, 0.05);
@@ -144,7 +161,7 @@ body {
 	position: relative;
 }
 
-.spp-go-prem-switcher label span {
+.switcher label span {
 	-ms-flex-preferred-size: 50%;
 	flex-basis: 50%;
 	cursor: pointer;
@@ -165,13 +182,13 @@ body {
 	-o-transition: all ease 0.2s;
 	transition: all ease 0.2s;
 }
-.spp-go-prem-switcher label span:first-of-type {
+.switcher label span:first-of-type {
 	font-weight: 500;
 }
-.spp-go-prem-switcher label span:last-of-type {
+.switcher label span:last-of-type {
 	color: rgba(255, 255, 255, 0.5);
 }
-.go-prem-switcher-bg {
+.switcher-bg {
 	width: 50%;
 	background-color: #ffffff;
 	height: 38px;
